@@ -1,28 +1,42 @@
-import { GoogleGenerativeAI } from "@google/generative-ai";
+import { GoogleGenAI } from "@google/genai";
 
-const API_KEY = "AIzaSyCo6uhWzUYi6J7jtWfOXXgTO1gDTKeLa0g";
-const genAI = new GoogleGenerativeAI({ apiKey: API_KEY });
 
-async function generate(prompt, onChunk) {
-  const response = await genAI.generateContent({
-    model: "gemini-1.5-pro",
-    messages: [
-      {
-        role: "user",
-        content: [
-          {
-            type: "text",
-            text: prompt,
-          },
-        ],
-      },
-    ],
-  });
+const ai = new GoogleGenAI({
+  apiKey: "AIzaSyBLDtbeIqfYPhoxiKBU59vwGBQk-_6Q2T4"
+});
 
-  const text = response.output?.[0]?.content?.[0]?.text ?? "";
+const generate = async (prompt, retries = 3) => {
+  for (let attempt = 1; attempt <= retries; attempt++) {
+    try {
+      const response = await ai.models.generateContent({
+        model: "gemini-2.0-flash",
+        contents: prompt,
+      });
 
-  if (onChunk) onChunk(text);
-  return text;
-}
+      console.log("Full response:", response);
+      return response.text();
+
+    } catch (error) {
+      console.error(`Gemini Error (Attempt ${attempt}/${retries}):`, error);
+
+      // Check if it's a quota/rate limit error (429)
+      if (error.status === "RESOURCE_EXHAUSTED" || error.error?.code === 429) {
+        if (attempt < retries) {
+          const delay = Math.pow(2, attempt) * 1000; // Exponential backoff
+          console.log(`Quota exceeded. Retrying in ${delay}ms...`);
+          await new Promise(resolve => setTimeout(resolve, delay));
+          continue;
+        }
+        return "API quota exceeded. Please try again later or upgrade your plan.";
+      }
+
+      // For other errors on last attempt
+      if (attempt === retries) {
+        return "Error generating response";
+      }
+    }
+  }
+};
+
 
 export default generate;
