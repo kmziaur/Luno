@@ -1,41 +1,41 @@
-# 🚀 Luno
+# Luno
 
 A modern, scalable, and responsive **AI-powered web application** built with **React**, **Vite**, and modern frontend technologies.  
 Luno is designed with a clean UI, modular architecture, and high performance to deliver a seamless user experience.
 
 ---
 
-## 📌 Table of Contents
+##  Table of Contents
 
-- [✨ Features](#-features)
-- [🛠️ Tech Stack](#-tech-stack)
-- [📁 Project Structure](#-project-structure)
-- [⚙️ Installation](#-installation)
-- [🚀 Running the Project](#-running-the-project)
-- [📦 Build for Production](#-build-for-production)
-- [🧪 Linting](#-linting)
-- [📸 Screenshots](#-screenshots)
-- [👨‍💻 Author](#-author)
-
----
-
-## ✨ Features
-
-- ⚡ Lightning-fast development with **Vite**
-- ⚛️ Built with **React 18**
-- 🎨 Modern UI with **Tailwind CSS**
-- 🧭 Smooth navigation using **React Router DOM**
-- 🧩 Modular and reusable components
-- 🧠 Clean and scalable architecture
-- 📱 Fully responsive design (mobile + desktop)
-- 🔍 Code quality enforced with **ESLint**
-- 🔐 Secure API handling (if applicable)
-- 🤖 AI-powered features integration
-- 🎯 Optimized performance and fast loading
+- [ Features](#-features)
+- [ Tech Stack](#-tech-stack)
+- [ Project Structure](#-project-structure)
+- [ Installation](#-installation)
+- [ Running the Project](#-running-the-project)
+- [ Build for Production](#-build-for-production)
+- [ Linting](#-linting)
+- [ Screenshots](#-screenshots)
+- [ Author](#-author)
 
 ---
 
-## 🛠️ Tech Stack
+##  Features
+
+-  Lightning-fast development with **Vite**
+-  Built with **React 18**
+-  Modern UI with **Tailwind CSS**
+-  Smooth navigation using **React Router DOM**
+-  Modular and reusable components
+-  Clean and scalable architecture
+-  Fully responsive design (mobile + desktop)
+-  Code quality enforced with **ESLint**
+-  Secure API handling (if applicable)
+-  AI-powered features integration
+-  Optimized performance and fast loading
+
+---
+
+##  Tech Stack
 
 | Technology        | Purpose                        |
 |------------------|--------------------------------|
@@ -49,7 +49,7 @@ Luno is designed with a clean UI, modular architecture, and high performance to 
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```bash
 Luno/
@@ -73,14 +73,14 @@ Luno/
 
 ---
 
-## ⚙️ Installation
+##  Installation
 
-### 📥 Prerequisites
+###  Prerequisites
 
 - Node.js (>= 16)
 - npm or yarn
 
-### 🔧 Steps
+###  Steps
 
 ```bash
 # Clone the repository
@@ -95,7 +95,7 @@ npm install
 
 ---
 
-## 🚀 Running the Project
+##  Running the Project
 
 ```bash
 npm run dev
@@ -109,7 +109,7 @@ http://localhost:5173
 
 ---
 
-## 📦 Build for Production
+##  Build for Production
 
 ```bash
 npm run build
@@ -117,7 +117,7 @@ npm run build
 
 ---
 
-## 🔍 Preview Production Build
+##  Preview Production Build
 
 ```bash
 npm run preview
@@ -125,7 +125,7 @@ npm run preview
 
 ---
 
-## 🧪 Linting
+##  Linting
 
 ```bash
 npm run lint
@@ -133,7 +133,7 @@ npm run lint
 
 ---
 
-## 👨‍💻 Author
+##  Author
 
 **K.M. Ziaur Rahman**
 
